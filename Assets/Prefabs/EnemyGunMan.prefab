@@ -128,17 +128,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68326803659e84c448a7cef9d97aa22e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerBeaconInstance: {fileID: 0}
+  activeRange: 25
+  moveSpeed: 10
+  rotationSpeed: 10
   bullet: {fileID: 4677528067082308192, guid: cdb0b3547cae8a043b6f6e2a6d0237c6, type: 3}
   gun: {fileID: 3632417790403472309}
   gunTip: {fileID: 3632417790748435644}
-  bulletTargetTra: {fileID: 0}
   roamPos:
   - {fileID: 3632417790793851616}
   - {fileID: 3632417790566046475}
   - {fileID: 3632417791335008615}
-  speed: 1
   bulletSpeed: 10
-  minDistanceToLookAtPlayer: 25
 --- !u!1 &3632417790306146475
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,7 +171,7 @@ Transform:
   - {fileID: 3632417790241397533}
   - {fileID: 3632417791220599392}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3632417790403472309
 GameObject:

@@ -870,13 +870,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fc058df9dec7248b74dcf355705f7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTra: {fileID: 135756641613574979}
-  rotateSpeed: 10
---- !u!4 &1165670090 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8762098988412108560, guid: 221763cde00f73a46a91c687cb76cda0, type: 3}
-  m_PrefabInstance: {fileID: 412519548414994772}
-  m_PrefabAsset: {fileID: 0}
+  playerBeaconInstance: {fileID: 0}
+  activeRange: 25
+  moveSpeed: 10
+  rotationSpeed: 10
 --- !u!1 &1764214107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1298,11 +1295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e087ecce43ebbff45a1b360637807d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &135756641613574979 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3728507862885751981, guid: 221763cde00f73a46a91c687cb76cda0, type: 3}
-  m_PrefabInstance: {fileID: 412519548414994772}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &412519548414994772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1500,10 +1492,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3632417790241397530, guid: facd8f0b6dac1614ab2fe2520f1a5439, type: 3}
-      propertyPath: bulletTargetTra
-      value: 
-      objectReference: {fileID: 1165670090}
     - target: {fileID: 3632417790306146474, guid: facd8f0b6dac1614ab2fe2520f1a5439, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -1551,10 +1539,6 @@ PrefabInstance:
     - target: {fileID: 3632417790306146475, guid: facd8f0b6dac1614ab2fe2520f1a5439, type: 3}
       propertyPath: m_Name
       value: EnemyGunMan
-      objectReference: {fileID: 0}
-    - target: {fileID: 3632417790306146475, guid: facd8f0b6dac1614ab2fe2520f1a5439, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -1615,14 +1599,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyChaser
       objectReference: {fileID: 0}
-    - target: {fileID: 5054603170546431930, guid: a786a72d12948414585c18f48f5cc23a, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5054603170546431931, guid: a786a72d12948414585c18f48f5cc23a, type: 3}
-      propertyPath: playerTra
-      value: 
-      objectReference: {fileID: 135756641613574979}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: a786a72d12948414585c18f48f5cc23a, type: 3}

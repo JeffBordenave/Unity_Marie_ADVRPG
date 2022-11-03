@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class DarkSoulsEnemy : Enemy
 {
-    [SerializeField] private Transform playerTra;
-    public float rotateSpeed = 10;
-
-    float speed = 1f;
     float timeCount = 0.0f;
 
     void Start()
@@ -19,7 +15,7 @@ public class DarkSoulsEnemy : Enemy
     {
         if (!TargetInRange()) return;
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, playerTra.rotation, rotateSpeed * Time.deltaTime);
-        transform.position -= transform.forward * speed * Time.deltaTime;
+        LookAtTarget();
+        MoveForward();
     }
 }
