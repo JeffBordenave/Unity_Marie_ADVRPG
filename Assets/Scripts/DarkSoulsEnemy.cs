@@ -10,7 +10,7 @@ public class DarkSoulsEnemy : Enemy
     float speed = 1f;
     float timeCount = 0.0f;
 
-    private void Start()
+    void Start()
     {
         base.Start();
     }

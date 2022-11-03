@@ -19,6 +19,11 @@ public class GoldenEyeEnemy : Enemy
     private Vector3 targetRoam;
     private GameObject currentBullet = null;
 
+    void Start()
+    {
+        base.Start();
+    }
+
     void Update()
     {
         if(!IsPlayerClose()) return;

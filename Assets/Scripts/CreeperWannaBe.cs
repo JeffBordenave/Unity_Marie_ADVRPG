@@ -8,7 +8,12 @@ public class CreeperWannaBe : Enemy
 
     public float speed = 10;
 
-    void Update()
+    void Start()
+    {
+        base.Start();
+    }
+
+        void Update()
     {
         transform.LookAt(GetPlayerPos());
 
