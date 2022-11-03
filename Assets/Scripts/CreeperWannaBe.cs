@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreeperWannaBe : MonoBehaviour
+public class CreeperWannaBe : Enemy
 {
     [SerializeField] private Transform playerTra;
 

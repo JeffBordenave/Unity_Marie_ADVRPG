@@ -18,6 +18,8 @@ public class GoldenEyeBullet : MonoBehaviour
     void Update()
     {
         if ((counter += Time.deltaTime) > lifeSpan) Destroy(gameObject);
+
+        transform.position += transform.forward * speed * Time.deltaTime;
     }
 
     private void OnTriggerEnter(Collider other)

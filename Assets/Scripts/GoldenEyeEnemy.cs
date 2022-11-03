@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
-public class GoldenEyeEnemy : MonoBehaviour
+public class GoldenEyeEnemy : Enemy
 {
     [SerializeField] private GoldenEyeBullet bullet;
 
@@ -22,19 +22,21 @@ public class GoldenEyeEnemy : MonoBehaviour
     void Update()
     {
         if(!IsPlayerClose()) return;
-            
-        transform.LookAt(GetTargetPos());
-        targetRoam = new Vector3(roamPos[currentRoamPos].position.x, 0, roamPos[currentRoamPos].position.z);
-        transform.position += (targetRoam - transform.position) * speed * Time.deltaTime;
+
+        Move();
 
         if (Vector3.Distance(transform.position,targetRoam) < 1)
         {
             if (currentRoamPos++ >= roamPos.Count - 1) currentRoamPos = 0;
             Shoot();
         }
+    }
 
-        currentBullet.transform.position += currentBullet.transform.forward * bulletSpeed * Time.deltaTime;
-
+    private void Move()
+    {
+        transform.LookAt(GetTargetPos());
+        targetRoam = new Vector3(roamPos[currentRoamPos].position.x, 0, roamPos[currentRoamPos].position.z);
+        transform.position += (targetRoam - transform.position) * speed * Time.deltaTime;
         gun.transform.LookAt(bulletTargetTra.position);
     }
 
@@ -50,10 +52,11 @@ public class GoldenEyeEnemy : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bullet = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        bullet.transform.localScale *= 0.2f;
-        bullet.transform.rotation = gun.transform.rotation;
-        bullet.transform.localPosition = gunTip.position;
-        bullet.tag = "Bullet";
+        GoldenEyeBullet _bullet = Instantiate(bullet);
+        _bullet.transform.rotation = gun.transform.rotation;
+        _bullet.transform.localPosition = gunTip.position;
+        _bullet.speed = bulletSpeed;
+        _bullet.lifeSpan = 3;
+        _bullet.target = bulletTargetTra;
     }
 }
