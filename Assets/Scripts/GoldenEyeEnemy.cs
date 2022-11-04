@@ -9,19 +9,21 @@ public class GoldenEyeEnemy : Enemy
 
     public GameObject gun;
     public Transform gunTip;
-    public Transform bulletTargetTra;
     public List<Transform> roamPos;
-    public float speed = 3;
     public float bulletSpeed = 3;
-    public float minDistanceToLookAtPlayer = 20;
 
     private int currentRoamPos = 0;
     private Vector3 targetRoam;
     private GameObject currentBullet = null;
 
+    void Start()
+    {
+        base.Start();
+    }
+
     void Update()
     {
-        if(!IsPlayerClose()) return;
+        if(!TargetInRange()) return;
 
         Move();
 
@@ -36,18 +38,13 @@ public class GoldenEyeEnemy : Enemy
     {
         transform.LookAt(GetTargetPos());
         targetRoam = new Vector3(roamPos[currentRoamPos].position.x, 0, roamPos[currentRoamPos].position.z);
-        transform.position += (targetRoam - transform.position) * speed * Time.deltaTime;
-        gun.transform.LookAt(bulletTargetTra.position);
+        transform.position += (targetRoam - transform.position) * moveSpeed * Time.deltaTime;
+        gun.transform.LookAt(playerBeaconInstance.transform.position);
     }
 
     Vector3 GetTargetPos()
     {
-        return bulletTargetTra.position;
-    }
-
-    bool IsPlayerClose()
-    {
-        return Vector3.Distance(GetTargetPos(), transform.position) < minDistanceToLookAtPlayer;
+        return playerBeaconInstance.transform.position;
     }
 
     void Shoot()
@@ -57,6 +54,6 @@ public class GoldenEyeEnemy : Enemy
         _bullet.transform.localPosition = gunTip.position;
         _bullet.speed = bulletSpeed;
         _bullet.lifeSpan = 3;
-        _bullet.target = bulletTargetTra;
+        _bullet.target = playerBeaconInstance.transform;
     }
 }
