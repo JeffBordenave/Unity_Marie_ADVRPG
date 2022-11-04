@@ -22,7 +22,7 @@ public class Enemy : MonoBehaviour
 
     public void MoveForward()
     {
-        transform.position -= transform.forward * moveSpeed * Time.deltaTime;
+        transform.position += transform.forward * moveSpeed * Time.deltaTime;
     }
 
     public void LookAtTarget()
