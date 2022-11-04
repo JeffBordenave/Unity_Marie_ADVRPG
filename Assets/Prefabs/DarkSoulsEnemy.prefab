@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 5896231619502489894}
   - component: {fileID: 5896231619502489898}
   - component: {fileID: 5896231619502489899}
+  - component: {fileID: 1104853002}
   m_Layer: 0
   m_Name: DarkSoulsEnemy
   m_TagString: Untagged
@@ -67,7 +68,7 @@ Transform:
   m_Children:
   - {fileID: 6757641509612802581}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5896231619502489892
 MeshFilter:
@@ -166,6 +167,22 @@ CapsuleCollider:
   m_Height: 1.2481943
   m_Direction: 2
   m_Center: {x: -0.028332803, y: -0.12735276, z: -1.0930996}
+--- !u!54 &1104853002
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5896231619502489889}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5896231619636401261
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +208,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5896231619636401261}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.9999997, z: -0, w: 0.00078295916}
   m_LocalPosition: {x: 0, y: -1.1199999, z: -0.57300013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -200,7 +217,7 @@ Transform:
   - {fileID: 5896231620186330557}
   m_Father: {fileID: 6757641509612802581}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.91, z: 0}
 --- !u!95 &5896231619636401267
 Animator:
   serializedVersion: 4

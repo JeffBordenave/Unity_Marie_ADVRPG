@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5054603170546431879
 MeshFilter:
@@ -128,6 +128,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBeaconInstance: {fileID: 0}
-  activeRange: 30
-  moveSpeed: 3
+  activeRange: 25
+  moveSpeed: 1
   rotationSpeed: 10
