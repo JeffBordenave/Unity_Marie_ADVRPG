@@ -15,9 +15,9 @@ public class Enemy : MonoBehaviour
         playerBeaconInstance = PlayerBeacon.instance;
     }
 
-    public bool TargetInRange()
+    public bool TargetInRange(float range)
     {
-        return Vector3.Distance(playerBeaconInstance.GetTransform().position, transform.position) < activeRange;
+        return Vector3.Distance(playerBeaconInstance.GetTransform().position, transform.position) < range;
     }
 
     public void MoveForward()

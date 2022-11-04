@@ -772,6 +772,7 @@ GameObject:
   - component: {fileID: 1104852997}
   - component: {fileID: 1104852996}
   - component: {fileID: 1104853000}
+  - component: {fileID: 1104853001}
   m_Layer: 0
   m_Name: DarkSoulsEnemy
   m_TagString: Untagged
@@ -872,8 +873,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBeaconInstance: {fileID: 0}
   activeRange: 25
-  moveSpeed: 10
+  moveSpeed: 1
   rotationSpeed: 10
+  playerInRangeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  hitRange: 4
+--- !u!136 &1104853001
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1104852995}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.36884773
+  m_Height: 1.2481943
+  m_Direction: 2
+  m_Center: {x: -0.028332803, y: -0.12735276, z: -1.0930996}
 --- !u!1 &1764214107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,6 +1196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2044685648}
   - component: {fileID: 2044685649}
+  - component: {fileID: 2044685650}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -1221,6 +1241,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2044685650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044685647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1f65c52b8605a41bf91c4ef6699953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dseScript: {fileID: 1104853000}
+  hitCollider: {fileID: 1104853001}
 --- !u!1001 &2084445384
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1540,6 +1574,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyGunMan
       objectReference: {fileID: 0}
+    - target: {fileID: 3632417790306146475, guid: facd8f0b6dac1614ab2fe2520f1a5439, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: facd8f0b6dac1614ab2fe2520f1a5439, type: 3}
@@ -1598,6 +1636,10 @@ PrefabInstance:
     - target: {fileID: 5054603170546431930, guid: a786a72d12948414585c18f48f5cc23a, type: 3}
       propertyPath: m_Name
       value: EnemyChaser
+      objectReference: {fileID: 0}
+    - target: {fileID: 5054603170546431930, guid: a786a72d12948414585c18f48f5cc23a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
