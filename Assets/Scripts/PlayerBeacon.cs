@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerBeacon : MonoBehaviour
 {
+    [SerializeField] private CapsuleCollider hurtBox;
+
     static public PlayerBeacon instance;
     private Animator animator;
 
@@ -33,11 +35,11 @@ public class PlayerBeacon : MonoBehaviour
 
     public void EnableHitBox()
     {
-
+        hurtBox.enabled = true;
     }
 
     public void DisableHitBox()
     {
-
+        hurtBox.enabled = false;
     }
 }
