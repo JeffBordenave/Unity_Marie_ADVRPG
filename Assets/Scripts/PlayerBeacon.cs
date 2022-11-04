@@ -7,22 +7,34 @@ using UnityEngine.SceneManagement;
 public class PlayerBeacon : MonoBehaviour
 {
     [SerializeField] private CapsuleCollider hurtBox;
-    [SerializeField] private float maxHealth = 10;
 
     static public PlayerBeacon instance;
 
+    public HealthBar healthBar = default;
+    public float maxHealth = 20;
+    public float healthGainOnLvlUp = 2;
+    
+    public HealthBar XPBar = default;
+    public float maxXp = 20;
+
     private Animator animator;
     private float health;
+    private float xp;
 
     private void Awake()
     {
         instance = this;
         health = maxHealth;
+        xp = 0;
     }
 
     private void Start()
     {
         animator = GetComponent<Animator>();
+        healthBar.SetMaxValue(maxHealth);
+        healthBar.SetValue(maxHealth);
+        XPBar.SetMaxValue(maxXp);
+        XPBar.SetValue(0);
     }
 
     private void Update()
@@ -48,10 +60,35 @@ public class PlayerBeacon : MonoBehaviour
         hurtBox.enabled = false;
     }
 
-    public void GetHurt()
+    public void GetHurt(float damage)
     {
         print(health);
-        health--;
+
+        health-= damage;
+        healthBar.SetValue(health);
+
         if (health < 0) SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void GetXP(float xpGain)
+    {
+        xp += xpGain;
+
+        if (xp >= maxXp)
+        {
+            LevelUp();
+            xp -= maxXp;
+        }
+
+        XPBar.SetValue(xp);
+    }
+
+    private void LevelUp()
+    {
+        maxHealth += healthGainOnLvlUp;
+        health += healthGainOnLvlUp;
+
+        healthBar.SetMaxValue(maxHealth);
+        healthBar.SetValue(health);
     }
 }

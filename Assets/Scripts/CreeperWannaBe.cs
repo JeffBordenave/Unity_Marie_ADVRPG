@@ -21,7 +21,7 @@ public class CreeperWannaBe : Enemy
     {
         if(collision.gameObject.tag == "Player")
         {
-            playerBeaconInstance.GetHurt();
+            playerBeaconInstance.GetHurt(1);
             Destroy(gameObject);
         }
             

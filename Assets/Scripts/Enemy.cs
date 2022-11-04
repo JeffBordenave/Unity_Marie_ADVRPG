@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour
     public float activeRange = 25;
     public float moveSpeed = 10;
     public float rotationSpeed = 10;
+    public float xpGain = 3;
 
     protected void Start()
     {
@@ -29,5 +30,10 @@ public class Enemy : MonoBehaviour
     {
         //transform.rotation = Quaternion.Slerp(transform.rotation, playerBeaconInstance.transform.rotation, rotationSpeed * Time.deltaTime);
         transform.LookAt(playerBeaconInstance.transform.position);
+    }
+
+    private void OnDestroy()
+    {
+        playerBeaconInstance.GetXP(xpGain);
     }
 }

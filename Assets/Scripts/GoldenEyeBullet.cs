@@ -29,7 +29,7 @@ public class GoldenEyeBullet : MonoBehaviour
         if (other.tag == "Player") 
         {
             print("touché");
-            PlayerBeacon.instance.GetHurt();
+            PlayerBeacon.instance.GetHurt(1);
         }
 
 
