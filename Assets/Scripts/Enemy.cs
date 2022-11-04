@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour
 
     public void LookAtTarget()
     {
-        transform.rotation = Quaternion.Lerp(transform.rotation, playerBeaconInstance.transform.rotation, rotationSpeed * Time.deltaTime);
+        //transform.rotation = Quaternion.Slerp(transform.rotation, playerBeaconInstance.transform.rotation, rotationSpeed * Time.deltaTime);
+        transform.LookAt(playerBeaconInstance.transform.position);
     }
 }
