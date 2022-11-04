@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
 
     protected void Start()
     {
+        tag = "Enemy";
         playerBeaconInstance = PlayerBeacon.instance;
     }
 
