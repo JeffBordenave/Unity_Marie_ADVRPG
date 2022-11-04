@@ -16,4 +16,14 @@ public class CreeperWannaBe : Enemy
         LookAtTarget();
         MoveForward();
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            playerBeaconInstance.GetHurt();
+            Destroy(gameObject);
+        }
+            
+    }
 }

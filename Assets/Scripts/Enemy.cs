@@ -9,7 +9,6 @@ public class Enemy : MonoBehaviour
     public float moveSpeed = 10;
     public float rotationSpeed = 10;
 
-
     protected void Start()
     {
         tag = "Enemy";

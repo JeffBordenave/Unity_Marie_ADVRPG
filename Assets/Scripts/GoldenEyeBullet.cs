@@ -10,6 +10,8 @@ public class GoldenEyeBullet : MonoBehaviour
 
     private float counter;
 
+    private PlayerBeacon beacon;
+
     void Start()
     {
         counter = 0;
@@ -24,7 +26,12 @@ public class GoldenEyeBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player") print("touché");
+        if (other.tag == "Player") 
+        {
+            print("touché");
+            PlayerBeacon.instance.GetHurt();
+        }
+
 
         Destroy(gameObject);
     }
