@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBeaconInstance: {fileID: 0}
   activeRange: 25
-  moveSpeed: 10
+  moveSpeed: 4
   rotationSpeed: 10
   bullet: {fileID: 4677528067082308192, guid: cdb0b3547cae8a043b6f6e2a6d0237c6, type: 3}
   gun: {fileID: 3632417790403472309}
@@ -171,7 +171,7 @@ Transform:
   - {fileID: 3632417790241397533}
   - {fileID: 3632417791220599392}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3632417790403472309
 GameObject:
@@ -270,7 +270,7 @@ GameObject:
   m_Layer: 0
   m_Name: position_1
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -332,7 +332,7 @@ GameObject:
   m_Layer: 0
   m_Name: position_0
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -397,7 +397,7 @@ GameObject:
   m_Layer: 0
   m_Name: position_2
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
