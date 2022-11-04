@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3632417790241397533}
   - component: {fileID: 3632417790241397534}
   - component: {fileID: 3632417790241397535}
-  - component: {fileID: 3632417790241397528}
   - component: {fileID: 3632417790241397529}
   - component: {fileID: 3632417790241397530}
+  - component: {fileID: 1820794033}
   m_Layer: 0
   m_Name: EnemyShooter
   m_TagString: Untagged
@@ -44,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3632417790241397531}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &3632417790241397535
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -87,19 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3632417790241397528
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3632417790241397531}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &3632417790241397529
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -140,6 +127,19 @@ MonoBehaviour:
   - {fileID: 3632417790566046475}
   - {fileID: 3632417791335008615}
   bulletSpeed: 10
+--- !u!135 &1820794033
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3632417790241397531}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3632417790306146475
 GameObject:
   m_ObjectHideFlags: 0
