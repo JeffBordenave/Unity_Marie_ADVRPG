@@ -37,7 +37,8 @@ public class GoldenEyeEnemy : Enemy
     private void Move()
     {
         transform.LookAt(GetTargetPos());
-        targetRoam = new Vector3(roamPos[currentRoamPos].position.x, 0, roamPos[currentRoamPos].position.z);
+        //targetRoam = new Vector3(roamPos[currentRoamPos].position.x, 0, roamPos[currentRoamPos].position.z);
+        MoveForward();
         transform.position += (targetRoam - transform.position) * moveSpeed * Time.deltaTime;
         gun.transform.LookAt(playerBeaconInstance.transform.position);
     }
