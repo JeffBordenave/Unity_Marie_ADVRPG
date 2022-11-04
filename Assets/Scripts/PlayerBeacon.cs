@@ -9,13 +9,15 @@ public class PlayerBeacon : MonoBehaviour
     [SerializeField] private CapsuleCollider hurtBox;
 
     static public PlayerBeacon instance;
-
+    [Space]
     public HealthBar healthBar = default;
     public float maxHealth = 20;
     public float healthGainOnLvlUp = 2;
-    
+    [Space]
     public HealthBar XPBar = default;
     public float maxXp = 20;
+    [Space]
+    public Inventory inv = default;
 
     private Animator animator;
     private float health;
@@ -42,6 +44,27 @@ public class PlayerBeacon : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             animator.Play("Player_Attack");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            inv.UseItem(0);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            inv.UseItem(1);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            inv.UseItem(2);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            inv.UseItem(3);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            inv.UseItem(4);
         }
     }
 
@@ -90,5 +113,10 @@ public class PlayerBeacon : MonoBehaviour
 
         healthBar.SetMaxValue(maxHealth);
         healthBar.SetValue(health);
+    }
+
+    public void FindItem(Item item)
+    {
+        inv.AddItem(item);
     }
 }

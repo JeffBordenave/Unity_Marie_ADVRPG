@@ -31,8 +31,7 @@ public class GoldenEyeBullet : MonoBehaviour
             print("touché");
             PlayerBeacon.instance.GetHurt(1);
         }
-
-
+        
         Destroy(gameObject);
     }
 }
