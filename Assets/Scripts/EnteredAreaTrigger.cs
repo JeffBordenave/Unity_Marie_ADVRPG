@@ -15,7 +15,7 @@ public class EnteredAreaTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!hasBeenActivated && other.gameObject.tag == "Player")
+        if (!hasBeenActivated && other.gameObject.CompareTag("Player"))
         {
             hasBeenActivated = true;
             DiscoveryPopUp.EnteredNewArea.Invoke(areaName);
