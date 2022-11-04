@@ -30,6 +30,6 @@ public class DarkSoulsEnemy : Enemy
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player") playerBeaconInstance.GetHurt(); ;
+        if (other.tag == "Player") playerBeaconInstance.GetHurt();
     }
 }
