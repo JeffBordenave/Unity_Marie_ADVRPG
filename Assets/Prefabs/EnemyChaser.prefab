@@ -129,5 +129,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBeaconInstance: {fileID: 0}
   activeRange: 25
-  moveSpeed: 10
+  moveSpeed: 1
   rotationSpeed: 10

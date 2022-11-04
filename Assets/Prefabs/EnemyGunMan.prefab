@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerBeaconInstance: {fileID: 0}
   activeRange: 25
-  moveSpeed: 10
+  moveSpeed: 2
   rotationSpeed: 10
   bullet: {fileID: 4677528067082308192, guid: cdb0b3547cae8a043b6f6e2a6d0237c6, type: 3}
   gun: {fileID: 3632417790403472309}
