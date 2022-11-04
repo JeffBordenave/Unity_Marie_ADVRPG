@@ -23,7 +23,7 @@ public class GoldenEyeEnemy : Enemy
 
     void Update()
     {
-        if(!TargetInRange()) return;
+        if(!TargetInRange(activeRange)) return;
 
         Move();
 

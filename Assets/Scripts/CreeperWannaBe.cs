@@ -11,7 +11,7 @@ public class CreeperWannaBe : Enemy
 
     void Update()
     {
-        if (!TargetInRange()) return;
+        if (!TargetInRange(activeRange)) return;
 
         LookAtTarget();
         MoveForward();
