@@ -7,6 +7,8 @@ public class EnteredAreaTrigger : MonoBehaviour
     bool hasBeenActivated;
     public string areaName;
 
+    public Item itemToGive;
+
     private void Awake()
     {
         hasBeenActivated = false;
@@ -19,6 +21,11 @@ public class EnteredAreaTrigger : MonoBehaviour
         {
             hasBeenActivated = true;
             DiscoveryPopUp.EnteredNewArea.Invoke(areaName);
+
+            if (itemToGive != null)
+            {
+
+            }
         }
     }
 }
