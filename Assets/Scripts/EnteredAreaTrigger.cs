@@ -24,7 +24,7 @@ public class EnteredAreaTrigger : MonoBehaviour
 
             if (itemToGive != null)
             {
-
+                PlayerBeacon.instance.FindItem(itemToGive);
             }
         }
     }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Item : MonoBehaviour
 {
-    public void Use()
+    public virtual void Use()
     {
         print("Item " + this.name + " has been used");
     }

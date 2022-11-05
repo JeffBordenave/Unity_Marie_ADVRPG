@@ -479,6 +479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaName: Ancient Remains
+  itemToGive: {fileID: 7109920681788388487, guid: 8b55523fdee78b54d8ec1133acb0cbf6, type: 3}
 --- !u!65 &165016830
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1938,6 +1939,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaName: Old Ruins
+  itemToGive: {fileID: 7109920681788388487, guid: 8b55523fdee78b54d8ec1133acb0cbf6, type: 3}
 --- !u!65 &854578744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2870,7 +2872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3172634862134319402, guid: cbdf6de9210cc12468b6fd649499e19b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -49
+      value: -167
       objectReference: {fileID: 0}
     - target: {fileID: 3172634862134319402, guid: cbdf6de9210cc12468b6fd649499e19b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2904,6 +2906,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3172634862134319402, guid: cbdf6de9210cc12468b6fd649499e19b, type: 3}
   m_PrefabInstance: {fileID: 1103656252}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1103656254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3172634862134319405, guid: cbdf6de9210cc12468b6fd649499e19b, type: 3}
+  m_PrefabInstance: {fileID: 1103656252}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6264b55b2d402b6458b9902d10c7d25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1107429103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3249,6 +3262,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3728507862885751981, guid: 221763cde00f73a46a91c687cb76cda0, type: 3}
   m_PrefabInstance: {fileID: 1768920917}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1379607870 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3172634862134319405, guid: 39bb44f7298b60a48824b5069f5fb2a0, type: 3}
+  m_PrefabInstance: {fileID: 958718007}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6264b55b2d402b6458b9902d10c7d25e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1405007666 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2224551168094452091, guid: aeea8ffce8a802540b654f27974cdf13, type: 3}
+  m_PrefabInstance: {fileID: 1084120872}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 028927735b75f4346b6ecf4dbc3ccf6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1430065056
 GameObject:
   m_ObjectHideFlags: 0
@@ -3646,6 +3681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaName: Barbarian Outpost
+  itemToGive: {fileID: -8504945437380488919, guid: baea640c2f185d548aac707b011d4b29, type: 3}
 --- !u!65 &1526039098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3953,6 +3989,18 @@ PrefabInstance:
       propertyPath: SprintSpeed
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 5197115519730489379, guid: 221763cde00f73a46a91c687cb76cda0, type: 3}
+      propertyPath: inv
+      value: 
+      objectReference: {fileID: 1405007666}
+    - target: {fileID: 5197115519730489379, guid: 221763cde00f73a46a91c687cb76cda0, type: 3}
+      propertyPath: XPBar
+      value: 
+      objectReference: {fileID: 1103656254}
+    - target: {fileID: 5197115519730489379, guid: 221763cde00f73a46a91c687cb76cda0, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1379607870}
     - target: {fileID: 8762098988412108560, guid: 221763cde00f73a46a91c687cb76cda0, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.375
@@ -4485,6 +4533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaName: Mount Growl
+  itemToGive: {fileID: -8504945437380488919, guid: baea640c2f185d548aac707b011d4b29, type: 3}
 --- !u!65 &1972441316
 BoxCollider:
   m_ObjectHideFlags: 0

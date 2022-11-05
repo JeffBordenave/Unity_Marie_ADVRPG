@@ -4,5 +4,11 @@ using UnityEngine;
 
 public class Key : Item
 {
+    public float expGiven;
 
+    public override void Use()
+    {
+        base.Use();
+        FindObjectOfType<PlayerBeacon>().GetXP(expGiven);
+    }
 }
