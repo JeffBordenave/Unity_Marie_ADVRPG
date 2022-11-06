@@ -1,3 +1,4 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,8 @@ public class PlayerBeacon : MonoBehaviour
     public float maxXp = 20;
     [Space]
     public Inventory inv = default;
+    [Space]
+    public float speedBoostTime = 2;
 
     private Animator animator;
     private float health;
@@ -118,5 +121,19 @@ public class PlayerBeacon : MonoBehaviour
     public void FindItem(Item item)
     {
         inv.AddItem(item);
+    }
+
+    public void IncreaseSpeed()
+    {
+        StartCoroutine(SpeedCoroutine());
+    }
+
+    public IEnumerator SpeedCoroutine()
+    {
+        GetComponent<FirstPersonController>().MoveSpeed *= 3f;
+        GetComponent<FirstPersonController>().SprintSpeed *= 3f;
+        yield return new WaitForSeconds(speedBoostTime);
+        GetComponent<FirstPersonController>().MoveSpeed /= 3f;
+        GetComponent<FirstPersonController>().SprintSpeed /= 3f;
     }
 }

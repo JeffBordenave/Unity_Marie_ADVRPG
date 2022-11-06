@@ -4002,12 +4002,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1379607870}
     - target: {fileID: 8762098988412108560, guid: 221763cde00f73a46a91c687cb76cda0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762098988412108560, guid: 221763cde00f73a46a91c687cb76cda0, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.375
       objectReference: {fileID: 0}
     - target: {fileID: 8762098988412108560, guid: 221763cde00f73a46a91c687cb76cda0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762098988412108560, guid: 221763cde00f73a46a91c687cb76cda0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762098988412108560, guid: 221763cde00f73a46a91c687cb76cda0, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8762098988412108560, guid: 221763cde00f73a46a91c687cb76cda0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -4533,7 +4549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   areaName: Mount Growl
-  itemToGive: {fileID: -8504945437380488919, guid: baea640c2f185d548aac707b011d4b29, type: 3}
+  itemToGive: {fileID: 3696883404779568775, guid: c6ca2e86b5c3c714dacac0f588fa2b6c, type: 3}
 --- !u!65 &1972441316
 BoxCollider:
   m_ObjectHideFlags: 0
