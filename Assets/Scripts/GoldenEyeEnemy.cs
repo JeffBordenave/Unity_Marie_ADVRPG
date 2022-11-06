@@ -14,15 +14,11 @@ public class GoldenEyeEnemy : Enemy
 
     private int currentRoamPos = 0;
     private Vector3 targetRoam;
-    private GameObject currentBullet = null;
 
-    void Start()
+    override protected void Update()
     {
-        base.Start();
-    }
+        base.Update();
 
-    void Update()
-    {
         if(!TargetInRange(activeRange)) return;
 
         Move();

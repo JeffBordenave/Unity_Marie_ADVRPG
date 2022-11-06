@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class CreeperWannaBe : Enemy
 {
-    void Start()
+    override protected void Update()
     {
-        base.Start();
-    }
+        base.Update();
 
-    void Update()
-    {
         if (!TargetInRange(activeRange)) return;
 
         LookAtTarget();
