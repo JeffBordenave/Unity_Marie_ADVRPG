@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public PlayerBeacon playerBeaconInstance;
+    private Animator animator;
     public float activeRange = 25;
     public float moveSpeed = 10;
     public float rotationSpeed = 10;
@@ -14,6 +15,7 @@ public class Enemy : MonoBehaviour
     {
         tag = "Enemy";
         playerBeaconInstance = PlayerBeacon.instance;
+        animator = GetComponent<Animator>();
     }
 
     public bool TargetInRange(float range)
@@ -32,8 +34,14 @@ public class Enemy : MonoBehaviour
         transform.LookAt(playerBeaconInstance.transform.position);
     }
 
-    private void OnDestroy()
+    public void Die()
     {
+        animator.Play("Enemy_Death");
+    }
+
+    public void DeathAnimOver()
+    {
+        Destroy(gameObject);
         playerBeaconInstance.GetXP(xpGain);
     }
 }

@@ -6,6 +6,6 @@ public class PlayerHurtBox : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Enemy") Destroy(other.gameObject);
+        if(other.tag == "Enemy") other.GetComponent<Enemy>().Die();
     }
 }

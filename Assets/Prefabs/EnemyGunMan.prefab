@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3632417790241397529}
   - component: {fileID: 3632417790241397530}
   - component: {fileID: 1820794033}
+  - component: {fileID: 8194210084904364040}
   m_Layer: 0
   m_Name: EnemyShooter
   m_TagString: Untagged
@@ -119,6 +120,7 @@ MonoBehaviour:
   activeRange: 25
   moveSpeed: 2
   rotationSpeed: 10
+  xpGain: 3
   bullet: {fileID: 4677528067082308192, guid: cdb0b3547cae8a043b6f6e2a6d0237c6, type: 3}
   gun: {fileID: 3632417790403472309}
   gunTip: {fileID: 3632417790748435644}
@@ -140,6 +142,26 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &8194210084904364040
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3632417790241397531}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 95fc68cf1e27bf3408e1edebb1e0e856, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &3632417790306146475
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,7 +193,7 @@ Transform:
   - {fileID: 3632417790241397533}
   - {fileID: 3632417791220599392}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3632417790403472309
 GameObject:

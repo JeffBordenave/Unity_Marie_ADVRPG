@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 1104853002}
   - component: {fileID: 4549630158699109335}
   - component: {fileID: 1732991723544984303}
+  - component: {fileID: 6236948800082090746}
   m_Layer: 0
   m_Name: DarkSoulsEnemy
   m_TagString: Untagged
@@ -68,7 +69,7 @@ Transform:
   m_Children:
   - {fileID: 6757641509612802581}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!135 &4618829659056306386
 SphereCollider:
@@ -99,6 +100,7 @@ MonoBehaviour:
   activeRange: 25
   moveSpeed: 1
   rotationSpeed: 10
+  xpGain: 3
   playerInRangeEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -183,6 +185,26 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5896231619502489889}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &6236948800082090746
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5896231619502489889}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03d99f4958208cd4198e1cfb439165ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5896231619636401261
 GameObject:
   m_ObjectHideFlags: 0
