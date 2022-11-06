@@ -8,18 +8,23 @@ public class DarkSoulsEnemy : Enemy
     public UnityEvent playerInRangeEvent;
     public float hitRange = 4;
 
-    void Start()
+    override protected void Start()
     {
         base.Start();
+
         if (playerInRangeEvent == null)
             playerInRangeEvent = new UnityEvent();
     }
 
-    void Update()
+    override protected void Update()
     {
+        base.Update();
+
         if (!TargetInRange(activeRange)) return;
 
         LookAtTarget();
+
+        transform.LookAt(playerBeaconInstance.transform.position);
 
         if (TargetInRange(hitRange))
         {

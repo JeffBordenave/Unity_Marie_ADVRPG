@@ -5,17 +5,23 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public PlayerBeacon playerBeaconInstance;
-    private Animator animator;
     public float activeRange = 25;
     public float moveSpeed = 10;
     public float rotationSpeed = 10;
     public float xpGain = 3;
 
-    protected void Start()
+    private bool hasToDie = false;
+    private float counter = 0;
+
+    virtual protected void Start()
     {
         tag = "Enemy";
         playerBeaconInstance = PlayerBeacon.instance;
-        animator = GetComponent<Animator>();
+    }
+
+    virtual protected void Update()
+    {
+        if(hasToDie) DeathAnimation();
     }
 
     public bool TargetInRange(float range)
@@ -36,7 +42,13 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
-        animator.Play("Enemy_Death");
+        hasToDie = true;
+    }
+
+    private void DeathAnimation()
+    {
+        transform.localScale /= 1.1f;
+        if ((counter += Time.deltaTime) > 1) DeathAnimOver();
     }
 
     public void DeathAnimOver()
